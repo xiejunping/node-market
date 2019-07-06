@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel app -d dist",
-    "dev": "babel-node app/index.js",
-    "start": "node dist/index.js",
+    "dev": "babel-node bin/dev",
+    "start": "./node_modules/.bin/nodemon bin/www",
     "lint": "eslint --ext .js,.jsx app/"
   },
   "devDependencies": {
@@ -16,14 +16,24 @@
     "@babel/core": "^7.5.0",
     "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
+    "debug": "^4.1.1",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "http": "^0.0.0",
+    "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-favicon": "^2.0.1",
+    "koa-json": "^2.0.2",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0"
   }
 }
