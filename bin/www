@@ -6,7 +6,7 @@
 
 var http = require('http');
 var debug = require('debug')('demo:server');
-var app = require('../dist/index');
+var _app = _interopRequireDefault(require('../dist/index'));
 
 /**
  * Get port from environment and store in Express.
@@ -18,8 +18,7 @@ var port = normalizePort(process.env.PORT || '3000');
 /**
  * Create HTTP server.
  */
-console.log(app)
-var server = http.createServer(app.callback());
+var server = http.createServer(_app['default'].callback());
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -89,4 +88,8 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+}
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { "default": obj };
 }

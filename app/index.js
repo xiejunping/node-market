@@ -1,12 +1,12 @@
 import Koa from 'koa'
-import { Api, Connect, sess, router, mysql } from './middleware/index'
+import { api, connect, sess, router, mysql } from './middleware/index'
 
 const app = new Koa()
 
-Api(app)
-Connect(app)
+api(app)
+connect(app)
 // sess(app)
 // router(app)
 // mysql(app)
 
-module.exports = app
+export default app

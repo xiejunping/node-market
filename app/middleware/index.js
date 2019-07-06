@@ -1,5 +1,4 @@
-import root from './root'
+import api from './root'
 import connect from './connect'
 
-export const Api = root
-export const Connect = connect
+export { api, connect }
