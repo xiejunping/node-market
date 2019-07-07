@@ -9,7 +9,8 @@
     "build": "babel app -d dist",
     "dev": "babel-node bin/dev",
     "start": "./node_modules/.bin/nodemon bin/www",
-    "lint": "eslint --ext .js,.jsx app/"
+    "lint": "eslint --ext .js,.jsx app/",
+    "pm2": "pm2 start bin/www -i max"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -24,7 +25,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "http": "^0.0.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "pm2": "^3.5.1"
   },
   "dependencies": {
     "koa": "^2.7.0",
