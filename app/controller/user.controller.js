@@ -5,6 +5,12 @@ class UserController extends BaseController {
     const { ctx, logger } = this
 
   }
+
+  async login () {
+    const { ctx, logger } = this
+
+    return {}
+  }
 }
 
 export default UserController

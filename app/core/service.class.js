@@ -1,9 +1,7 @@
-class BaseService {
+export default class BaseService {
 
-  constructor () {
-
+  constructor (ctx) {
+    this.service = ctx.service
   }
 
 }
-
-export default BaseService
